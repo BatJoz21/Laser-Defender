@@ -202,7 +202,10 @@ MonoBehaviour:
   wavesConfig:
   - {fileID: 11400000, guid: 1dfa9ea7edbfa8c489a19c432c71a710, type: 2}
   - {fileID: 11400000, guid: 59f3ef67819823a438c52013cdcf8732, type: 2}
+  - {fileID: 11400000, guid: 0656ac8eb11f5674c97a0f5584edf2b4, type: 2}
+  - {fileID: 11400000, guid: dab0548857877954a827b7dc8dd9db55, type: 2}
   timeBetweenWaves: 0.5
+  isLooping: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

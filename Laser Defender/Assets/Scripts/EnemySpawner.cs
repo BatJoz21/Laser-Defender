@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private List<WavesConfigSO> wavesConfig;
     [SerializeField] private float timeBetweenWaves = 1.0f;
+    [SerializeField] private bool isLooping = true;
 
     private WavesConfigSO currentWave;
 
@@ -18,15 +19,19 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemyWaves()
     {
-        for (int i = 0; i < wavesConfig.Count; i++)
+        do
         {
-            currentWave = wavesConfig[i];
-            for (int j = 0; j < currentWave.GetEnemyCount(); j++)
+            for (int i = 0; i < wavesConfig.Count; i++)
             {
-                Instantiate(currentWave.GetEnemyPrefab(j), currentWave.GetStartingWaypoint().position, Quaternion.identity, transform);
-                yield return new WaitForSecondsRealtime(currentWave.GetRandomSpawnTime());
+                currentWave = wavesConfig[i];
+                for (int j = 0; j < currentWave.GetEnemyCount(); j++)
+                {
+                    Instantiate(currentWave.GetEnemyPrefab(j), currentWave.GetStartingWaypoint().position, Quaternion.identity, transform);
+                    yield return new WaitForSecondsRealtime(currentWave.GetRandomSpawnTime());
+                }
+                yield return new WaitForSecondsRealtime(timeBetweenWaves);
             }
-            yield return new WaitForSecondsRealtime(timeBetweenWaves);
         }
+        while (isLooping);
     }
 }
