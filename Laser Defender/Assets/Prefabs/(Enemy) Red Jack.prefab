@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7809067363691754320}
   - component: {fileID: 4384556003214450910}
+  - component: {fileID: -4085269422709876914}
   - component: {fileID: 1953070523544319850}
   - component: {fileID: 522402752747702355}
+  - component: {fileID: -193069419222966700}
+  - component: {fileID: -6576004638281232042}
   m_Layer: 6
   m_Name: (Enemy) Red Jack
   m_TagString: Enemy
@@ -86,6 +89,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &-4085269422709876914
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383051128511295004}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1953070523544319850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +145,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0038529038, y: -0.011558771}
@@ -143,4 +173,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8de9bbcbeaabe44b9f8905e60612300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wavesConfig: {fileID: 11400000, guid: 1dfa9ea7edbfa8c489a19c432c71a710, type: 2}
+--- !u!114 &-193069419222966700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383051128511295004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469d85f5e436aca4297ec44c9beee27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &-6576004638281232042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383051128511295004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04bb26eb7ade3b47ad5ff6b3f756c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

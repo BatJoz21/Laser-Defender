@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4501910774085567185}
   - component: {fileID: 2522227771039385185}
+  - component: {fileID: 5348083114453786587}
   - component: {fileID: 1143884053019701150}
   - component: {fileID: 8736157027234265095}
+  - component: {fileID: 5323719354434702204}
+  - component: {fileID: -3853299294823541629}
   m_Layer: 6
   m_Name: (Enemy) Los Vagos
   m_TagString: Enemy
@@ -32,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &2522227771039385185
 SpriteRenderer:
@@ -86,6 +89,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &5348083114453786587
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652172328021714469}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1143884053019701150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +145,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.004636079, y: -0.037088513}
@@ -143,3 +173,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8de9bbcbeaabe44b9f8905e60612300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5323719354434702204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652172328021714469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469d85f5e436aca4297ec44c9beee27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &-3853299294823541629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652172328021714469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04bb26eb7ade3b47ad5ff6b3f756c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

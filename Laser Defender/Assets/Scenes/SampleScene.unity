@@ -390,18 +390,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2298980380516821032, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2298980380516821032, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2298980380516821032, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
-      propertyPath: paddingTop
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4126838207022446272, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
       propertyPath: m_RootOrder
       value: 2
