@@ -19,7 +19,6 @@ public class Health : MonoBehaviour
     private void TakeDamage(int damage)
     {
         health -= damage;
-        //Debug.Log(health);
         if (health <= 0)
         {
             Destroy(gameObject);

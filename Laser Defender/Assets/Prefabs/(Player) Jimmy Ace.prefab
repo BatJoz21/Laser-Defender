@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 1753453778656837421}
   - component: {fileID: 2298980380516821032}
   - component: {fileID: 560513556628630665}
-  m_Layer: 3
+  - component: {fileID: 6794688112405490148}
+  m_Layer: 6
   m_Name: (Player) Jimmy Ace
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -35,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4348446013505782237
 SpriteRenderer:
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 85457149
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e6489e9ea8c8dce409773e8eb29b6039, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -220,3 +221,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469d85f5e436aca4297ec44c9beee27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &6794688112405490148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6504217450290487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34dd68c17f7cfa446ba7f53e7a4ea092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6113674021463570660, guid: 7709073cd8b6ae34d8b3244d62f93eb2, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  firingRate: 1
