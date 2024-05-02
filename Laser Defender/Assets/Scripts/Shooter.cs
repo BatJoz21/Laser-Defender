@@ -17,8 +17,14 @@ public class Shooter : MonoBehaviour
 
     private bool isFiring;
     private Coroutine firingCoroutine;
+    private AudioPlayer audioPlayer;
 
     public bool IsFiring { get => isFiring; set => isFiring = value; }
+
+    private void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
 
     void Start()
     {
@@ -56,6 +62,7 @@ public class Shooter : MonoBehaviour
             {
                 rb.velocity = transform.up * projectileSpeed;
             }
+            audioPlayer.PlayShootingClip();
             Destroy(instance, projectileLifetime);
             yield return new WaitForSecondsRealtime(GetRandomFireRate());
         }
