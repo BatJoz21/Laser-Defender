@@ -401,7 +401,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 59f3ef67819823a438c52013cdcf8732, type: 2}
   - {fileID: 11400000, guid: 0656ac8eb11f5674c97a0f5584edf2b4, type: 2}
   - {fileID: 11400000, guid: dab0548857877954a827b7dc8dd9db55, type: 2}
-  timeBetweenWaves: 0.5
+  timeBetweenWaves: 1
   isLooping: 1
 --- !u!1 &963194225
 GameObject:
@@ -559,7 +559,7 @@ MonoBehaviour:
   damagedClip: {fileID: 8300000, guid: 5c2a9eae6263eff45b71b7d4c5a8308a, type: 3}
   damagedVolume: 0.45
   thrusterClip: {fileID: 8300000, guid: 2ad961b334d648d4cbba00c1a5f79cc6, type: 3}
-  thrusterVolume: 0.1
+  thrusterVolume: 0.05
 --- !u!1001 &6816508563075790649
 PrefabInstance:
   m_ObjectHideFlags: 0

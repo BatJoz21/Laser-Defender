@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     private void OnMove(InputValue value)
     {
         rawInput = value.Get<Vector2>();
+        audioPlayer.PlayThrusterClip();
     }
 
     private void Move(Vector2 val)
@@ -48,7 +49,6 @@ public class Player : MonoBehaviour
         newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + paddingLeft, maxBounds.x - paddingRight);
         newPos.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y + paddingBottom, maxBounds.y - paddingTop);
         transform.position = newPos;
-        audioPlayer.PlayThrusterClip();
     }
 
     //Firing

@@ -273,6 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   hitEffect: {fileID: 7501161544605488267, guid: 3b4a8432efa287a4daf59729d8dc3456, type: 3}
+  applyCameraShake: 0
 --- !u!114 &-6576004638281232042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04bb26eb7ade3b47ad5ff6b3f756c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
 --- !u!114 &-590290929947122669
 MonoBehaviour:
   m_ObjectHideFlags: 0
