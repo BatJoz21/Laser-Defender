@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 330543787}
   - component: {fileID: 330543786}
   - component: {fileID: 330543785}
+  - component: {fileID: 330543789}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -862,6 +863,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &330543789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330543784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d968e3c9a551044bbbea85e6c319cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScript: {fileID: 6816508563075790650}
+  healthSlider: {fileID: 87661495}
+  scoreText: {fileID: 713593259}
 --- !u!1 &432927183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 560513556628630665, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4126838207022446272, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1725,3 +1745,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
+--- !u!114 &6816508563075790650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 560513556628630665, guid: 331fff1a46d22eb44ba1866fdf62afff, type: 3}
+  m_PrefabInstance: {fileID: 6816508563075790649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469d85f5e436aca4297ec44c9beee27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

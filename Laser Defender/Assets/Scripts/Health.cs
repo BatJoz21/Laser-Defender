@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 50;
-    [SerializeField] private int enemyPoints = 0;
+    [SerializeField] private int health = 100;
+    [SerializeField] private int enemyPoints;
     [SerializeField] private ParticleSystem hitEffect;
     [SerializeField] private bool applyCameraShake;
     [SerializeField] private bool isPlayer;

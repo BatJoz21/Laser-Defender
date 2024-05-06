@@ -11,7 +11,6 @@ public class ScoreKeeper : MonoBehaviour
     public void ModifyScore(int score) 
     {
         currentScore += score;
-        Debug.Log(currentScore);
     }
 
     public void ResetScore() { currentScore = 0; }
