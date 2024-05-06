@@ -272,8 +272,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  enemyPoints: 15
   hitEffect: {fileID: 7501161544605488267, guid: 3b4a8432efa287a4daf59729d8dc3456, type: 3}
   applyCameraShake: 0
+  isPlayer: 0
 --- !u!114 &-6576004638281232042
 MonoBehaviour:
   m_ObjectHideFlags: 0

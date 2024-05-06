@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4348446013505782237
 SpriteRenderer:
@@ -224,6 +224,7 @@ MonoBehaviour:
   health: 50
   hitEffect: {fileID: 7501161544605488267, guid: 3b4a8432efa287a4daf59729d8dc3456, type: 3}
   applyCameraShake: 1
+  isPlayer: 1
 --- !u!114 &6794688112405490148
 MonoBehaviour:
   m_ObjectHideFlags: 0
