@@ -16,6 +16,15 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private AudioClip thrusterClip;
     [SerializeField, Range(0f, 1f)] private float thrusterVolume = 1f;
 
+    [Header("BGM")]
+    [SerializeField] private AudioClip bgmClip;
+    [SerializeField, Range(0f, 1f)] private float bgmVolume = 1f;
+
+    void Update()
+    {
+        PlayBGM();
+    }
+
     public void PlayShootingClip()
     {
         if (shootingClip != null)
@@ -37,6 +46,14 @@ public class AudioPlayer : MonoBehaviour
         if (thrusterClip != null)
         {
             AudioSource.PlayClipAtPoint(thrusterClip, Camera.main.transform.position, thrusterVolume);
+        }
+    }
+
+    public void PlayBGM()
+    {
+        if (bgmClip != null)
+        {
+            AudioSource.PlayClipAtPoint(bgmClip, Camera.main.transform.position, bgmVolume);
         }
     }
 }
