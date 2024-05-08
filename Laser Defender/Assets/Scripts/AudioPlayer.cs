@@ -17,12 +17,21 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float thrusterVolume = 1f;
 
     [Header("BGM")]
-    [SerializeField] private AudioClip bgmClip;
+    [SerializeField] private AudioSource bgmClip;
     [SerializeField, Range(0f, 1f)] private float bgmVolume = 1f;
+
+    private static AudioPlayer instance;
+
+    public static AudioPlayer GetInstance { get => instance; }
+
+    void Awake()
+    {
+        ManageSingleton();
+    }
 
     void Update()
     {
-        PlayBGM();
+        SetBGM();
     }
 
     public void PlayShootingClip()
@@ -49,11 +58,22 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
-    public void PlayBGM()
+    public void SetBGM()
     {
-        if (bgmClip != null)
+        bgmClip.volume = bgmVolume;
+    }
+
+    private void ManageSingleton()
+    {
+        if (instance != null)
         {
-            AudioSource.PlayClipAtPoint(bgmClip, Camera.main.transform.position, bgmVolume);
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 }
